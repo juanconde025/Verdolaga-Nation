@@ -5,13 +5,12 @@ import com.verdolaganation.Verdolaga_Nation.User.UserRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.util.Optional;
 
 @Service
 public class FollowService {
 
-    private FollowRepository followRepository;
-    private UserRepository userRepository;
+    private final FollowRepository followRepository;
+    private final UserRepository userRepository;
 
     public FollowService(FollowRepository followRepository, UserRepository userRepository) {
         this.followRepository = followRepository;
@@ -33,10 +32,7 @@ public class FollowService {
             throw new IllegalStateException("Ya sigues a este usuario.");
         }
 
-        Follow follow = new Follow();
-        follow.setFollower(follower);
-        follow.setFollowed(followed);
-
+        Follow follow = new Follow(follower, followed);
         return followRepository.save(follow);
     }
 
@@ -47,7 +43,7 @@ public class FollowService {
         User followed = userRepository.findById(followedId)
                 .orElseThrow(() -> new RuntimeException("Usuario seguido no encontrado"));
 
-        Follow follow = followRepository.findByFollowerIdAndFollowedId(followerId,followedId)
+        Follow follow = followRepository.findByFollowerAndFollowed(follower, followed)
                 .orElseThrow(() -> new RuntimeException("No sigues a este usuario"));
 
         followRepository.delete(follow);

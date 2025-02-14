@@ -14,25 +14,28 @@ public class Follow {
 
     @ManyToOne
     @JoinColumn(name = "id_user_follower", nullable = false)
-    private User Follower;
+    private User follower;
 
     @ManyToOne
     @JoinColumn(name = "id_user_followed", nullable = false)
-    private User Followed;
+    private User followed;
 
     @Column(nullable = false)
-    private LocalDateTime createdAt = LocalDateTime.now();
+    private LocalDateTime createdAt;
 
+    // 🔹 Constructor vacío requerido por JPA
     public Follow() {
+        this.createdAt = LocalDateTime.now();
     }
 
-    public Follow(int id, User follower, User followed, LocalDateTime createdAt) {
-        this.id = id;
-        Follower = follower;
-        Followed = followed;
-        this.createdAt = createdAt;
+    // 🔹 Constructor con parámetros
+    public Follow(User follower, User followed) {
+        this.follower = follower;
+        this.followed = followed;
+        this.createdAt = LocalDateTime.now();
     }
 
+    // 🔹 Getters y Setters
     public int getId() {
         return id;
     }
@@ -42,19 +45,19 @@ public class Follow {
     }
 
     public User getFollower() {
-        return Follower;
+        return follower;
     }
 
     public void setFollower(User follower) {
-        Follower = follower;
+        this.follower = follower;
     }
 
     public User getFollowed() {
-        return Followed;
+        return followed;
     }
 
     public void setFollowed(User followed) {
-        Followed = followed;
+        this.followed = followed;
     }
 
     public LocalDateTime getCreatedAt() {

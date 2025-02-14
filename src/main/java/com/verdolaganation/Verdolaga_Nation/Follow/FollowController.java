@@ -8,7 +8,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/follow")
 public class FollowController {
-    private FollowService followService;
+    private final FollowService followService;
 
     public FollowController(FollowService followService) {
         this.followService = followService;
@@ -25,7 +25,6 @@ public class FollowController {
         followService.unfollowUser(followerId, followedId);
         return ResponseEntity.ok("Unfollowed user added");
     }
-
 
     @GetMapping("/{userId}/following")
     public ResponseEntity<List<Follow>> getFollowing(@PathVariable int userId) {
