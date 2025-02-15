@@ -4,6 +4,7 @@ import com.verdolaganation.Verdolaga_Nation.User.User;
 import com.verdolaganation.Verdolaga_Nation.User.UserRepository;
 import org.springframework.stereotype.Service;
 
+import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Optional;
 
@@ -38,8 +39,10 @@ public class PublicationService {
         publication.setUser(user.get());
         publication.setDescription(description);
         publication.setImageUrl(imageUrl);
+        publication.setCreationDate(LocalDateTime.now());
         return publicationRepository.save(publication);
     }
+
 
     public Publication updatePublication(int id, String description, String imageUrl) {
         Optional<Publication> optionalPublication = publicationRepository.findById(id);

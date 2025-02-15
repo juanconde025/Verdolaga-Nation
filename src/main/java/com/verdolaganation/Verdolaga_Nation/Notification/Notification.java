@@ -13,7 +13,7 @@ public class Notification {
     private int id;
 
     @Column(nullable = false)
-    private String checked;
+    private boolean checked;
 
     @Column(nullable = false)
     private String type;
@@ -35,7 +35,7 @@ public class Notification {
     public Notification() {
     }
 
-    public Notification(int id, String checked, String type, String content, User interactor, User notified, LocalDateTime createdAt) {
+    public Notification(int id, boolean checked, String type, String content, User interactor, User notified, LocalDateTime createdAt) {
         this.id = id;
         this.checked = checked;
         this.type = type;
@@ -53,11 +53,11 @@ public class Notification {
         this.id = id;
     }
 
-    public String getChecked() {
+    public boolean getChecked() {
         return checked;
     }
 
-    public void setChecked(String checked) {
+    public void setChecked(boolean checked) {
         this.checked = checked;
     }
 
