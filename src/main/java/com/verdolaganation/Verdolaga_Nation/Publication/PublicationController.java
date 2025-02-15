@@ -7,7 +7,7 @@ import java.util.List;
 import java.util.Optional;
 
 @RestController
-@RequestMapping("/api/publications")
+@RequestMapping("/publications")
 public class PublicationController {
     private final PublicationService publicationService;
 
