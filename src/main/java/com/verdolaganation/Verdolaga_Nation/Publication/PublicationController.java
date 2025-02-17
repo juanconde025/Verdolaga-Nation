@@ -27,7 +27,7 @@ public class PublicationController {
                 .orElseGet(() -> ResponseEntity.notFound().build());
     }
 
-    @GetMapping("/user/{userId}")
+    @GetMapping("/publications-user/{userId}")
     public ResponseEntity<List<Publication>> getPublicationsByUserId(@PathVariable int userId) {
         return ResponseEntity.ok(publicationService.getPublicationsByUserId(userId));
     }
