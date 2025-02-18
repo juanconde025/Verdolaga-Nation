@@ -16,13 +16,13 @@ public class UserController {
         this.userService = userService;
     }
 
-    @GetMapping
+    @GetMapping("/find")
     public ResponseEntity<List<User>> getAllUsers() {
         List<User> users = userService.getAllUsers();
         return ResponseEntity.ok(users);
     }
 
-    @GetMapping("/{id}")
+    @GetMapping("/find/{id}")
     public ResponseEntity<User> getUserById(@PathVariable Integer id) {
         return userService.getUserById(id)
                 .map(ResponseEntity::ok)
@@ -43,7 +43,7 @@ public class UserController {
                 .orElseGet(() -> ResponseEntity.notFound().build());
     }
 
-    @PutMapping("/{id}")
+    @PutMapping("/edit/{id}")
     public ResponseEntity<User> updateUser(@PathVariable Integer id, @RequestBody User updatedUser) {
         try {
             User user = userService.updateUser(id, updatedUser);
@@ -53,7 +53,7 @@ public class UserController {
         }
     }
 
-    @DeleteMapping("/{id}")
+    @DeleteMapping("/delete/{id}")
     public ResponseEntity<Void> deleteUser(@PathVariable Integer id) {
         userService.deleteUser(id);
         return ResponseEntity.noContent().build();

@@ -1,5 +1,6 @@
 package com.verdolaganation.Verdolaga_Nation.Publication;
 
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -15,7 +16,7 @@ public class PublicationController {
         this.publicationService = publicationService;
     }
 
-    @GetMapping
+    @GetMapping("/find")
     public ResponseEntity<List<Publication>> getAllPublications() {
         return ResponseEntity.ok(publicationService.getAllPublications());
     }
@@ -32,15 +33,14 @@ public class PublicationController {
         return ResponseEntity.ok(publicationService.getPublicationsByUserId(userId));
     }
 
-    @PostMapping
-    public ResponseEntity<Publication> createPublication(@RequestParam int userId,
-                                                         @RequestParam String description,
-                                                         @RequestParam(required = false) String imageUrl) {
-        Publication publication = publicationService.createPublication(userId, description, imageUrl);
-        return ResponseEntity.ok(publication);
+    @PostMapping("/post")
+    public ResponseEntity<Publication> createPublication(@RequestBody Publication publication) {
+        Publication savedPublication = publicationService.createPublication(publication);
+        return ResponseEntity.status(HttpStatus.CREATED).body(savedPublication);
     }
 
-    @PutMapping("/{id}")
+
+    @PutMapping("/edit/{id}")
     public ResponseEntity<Publication> updatePublication(@PathVariable int id,
                                                          @RequestParam String description,
                                                          @RequestParam(required = false) String imageUrl) {
@@ -48,7 +48,7 @@ public class PublicationController {
         return ResponseEntity.ok(updatedPublication);
     }
 
-    @DeleteMapping("/{id}")
+    @DeleteMapping("/delete/{id}")
     public ResponseEntity<Void> deletePublication(@PathVariable int id) {
         publicationService.deletePublication(id);
         return ResponseEntity.noContent().build();

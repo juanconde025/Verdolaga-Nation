@@ -30,18 +30,16 @@ public class PublicationService {
         return publicationRepository.findByUserIdOrderByCreationDateDesc(userId);
     }
 
-    public Publication createPublication(int userId, String description, String imageUrl) {
-        Optional<User> user = userRepository.findById(userId);
+    public Publication createPublication(Publication publication) {
+        Optional<User> user = userRepository.findById(publication.getUser().getId());
         if (user.isEmpty()) {
-            throw new IllegalArgumentException("User with ID " + userId + " not exist");
+            throw new IllegalArgumentException("User with ID " + publication.getUser().getId() + " not exist");
         }
-        Publication publication = new Publication();
         publication.setUser(user.get());
-        publication.setDescription(description);
-        publication.setImageUrl(imageUrl);
         publication.setCreationDate(LocalDateTime.now());
         return publicationRepository.save(publication);
     }
+
 
 
     public Publication updatePublication(int id, String description, String imageUrl) {
