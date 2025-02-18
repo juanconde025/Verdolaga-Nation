@@ -64,3 +64,10 @@ El backend debería iniciarse en http://localhost:8080.
 - **Obtener perfil de usuario**: `GET /users/find`
 - **Obtener publicaciones**: `GET /publications/find`
 - **Crear publicación**: `POST /publications/post`
+
+
+## Enlace al repositorio del frontend
+
+El frontend de este proyecto está disponible en el siguiente repositorio:
+
+➡️ [Verdolaga Nation - Frontend](https://github.com/juanconde025/verdolaga-nation-frontend)
