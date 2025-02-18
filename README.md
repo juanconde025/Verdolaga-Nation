@@ -70,4 +70,4 @@ El backend debería iniciarse en http://localhost:8080.
 
 El frontend de este proyecto está disponible en el siguiente repositorio:
 
-➡️ [Verdolaga Nation - Frontend](https://github.com/juanconde025/verdolaga-nation-frontend)
+➡️ [Verdolaga Nation - Frontend](https://github.com/juanconde025/verdolaga_nation_front)
