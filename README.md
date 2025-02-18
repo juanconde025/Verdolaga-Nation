@@ -71,3 +71,9 @@ El backend debería iniciarse en http://localhost:8080.
 El frontend de este proyecto está disponible en el siguiente repositorio:
 
 ➡️ [Verdolaga Nation - Frontend](https://github.com/juanconde025/verdolaga_nation_front)
+
+## Documentación en Swagger 
+
+El proyecto consta de documentación en Swagger para ver sus endponits y sus utilidades
+
+➡️ [Swagger - Verdolaga Nation](http://localhost:8080/swagger-ui.html)
