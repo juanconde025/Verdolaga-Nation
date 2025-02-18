@@ -1,47 +1,46 @@
 # Verdolaga Nation - README
 
-Este repositorio contiene el código para la aplicación de Verdolaga Nation, una red social diseñada para interactuar con otros usuarios, publicar contenido, gestionar un perfil, y más. Este proyecto está dividido en dos partes: el **Backend** (Spring Boot) y el **Frontend** (React con Vite).
+This repository contains the code for the Verdolaga Nation application, a social network designed to interact with other users, post content, manage a profile, and more. This project is divided into two parts: the Backend (Spring Boot) and the Frontend (React with Vite).
 
-## Tabla de Contenidos
+## Table of Contents
 - [Backend](#backend)
-  - [Requisitos](#requisitos-backend)
-  - [Instalación y Configuración](#instalación-y-configuración-backend)
+  - [Requirements](#requisitos-backend)
+  - [Installation and Configuration](#instalación-y-configuración-backend)
   - [API Endpoints](#api-endpoints-backend)
 - [Frontend](#frontend)
-  - [Requisitos](#requisitos-frontend)
-  - [Instalación y Configuración](#instalación-y-configuración-frontend)
-  - [Scripts de Desarrollo](#scripts-de-desarrollo)
-- [Contribuir](#contribuir)
-- [Licencia](#licencia)
+  - [Requirements](#requisitos-frontend)
+  - [Installation and Configuration](#instalación-y-configuración-frontend)
+  - [Development Scripts](#scripts-de-desarrollo)
+- [Contribute](#contribuir)
+- [License](#licencia)
 
 ---
 
 ## Backend
 
-### Requisitos Backend
+### Backend Requirements
 - Java 17+
 - Maven
-- MySQL (o cualquier base de datos compatible con Spring Boot)
-- Postman (opcional para probar las API)
+- MySQL (or any database compatible with Spring Boot)
+- Postman (optional for testing APIs)
 
-### Instalación y Configuración Backend
+### Backend Installation and Configuration
 
-1. **Clonar el repositorio:**
+1. **Clone the repository:**
 
    ```bash
    git clone https://github.com/usuario/verdolaga-nation.git
    cd verdolaga-nation
    ```
-2. **Configuración de la base de datos:**
-
-Asegúrate de tener MySQL instalado y ejecutándose en tu máquina.
-Crea una base de datos llamada verdolaga_nation (o cambia el nombre de la base de datos en el archivo application.properties).
+2. **Database setup:**
+Ensure you have MySQL installed and running on your machine.
+Create a database named verdolaga_nation (or change the database name in the application.properties file).
 
 ```sql
 CREATE DATABASE verdolaga_nation;
 ```
-3. **Configura las credenciales de la base de datos:**
-En src/main/resources/application.properties, ajusta las credenciales de tu base de datos:
+3. **Configure database credentials:**
+In src/main/resources/application.properties, adjust your database credentials:
 ```properties
 spring.datasource.url=jdbc:mysql://localhost:3306/verdolaga_nation
 spring.datasource.username=tu_usuario
@@ -49,31 +48,30 @@ spring.datasource.password=tu_contraseña
 spring.jpa.hibernate.ddl-auto=update
 ```
 
-4. **Compilar y ejecutar el servidor backend:**
-
-Navega hasta la carpeta del backend y ejecuta:
+4. **Compile and run the backend server:**
+Navigate to the backend folder and run:
 ```bash
 mvn clean install
 mvn spring-boot:run
 ```
-El backend debería iniciarse en http://localhost:8080.
+The backend should start at http://localhost:8080.
 
 5. **API Endpoints Backend**
-- **Registro de usuario**: `POST /auth/register`
-- **Inicio de sesión**: `POST /auth/login`
-- **Obtener perfil de usuario**: `GET /users/find`
-- **Obtener publicaciones**: `GET /publications/find`
-- **Crear publicación**: `POST /publications/post`
+- **User registration**: `POST /auth/register`
+- **User login**: `POST /auth/login`
+- **Get user profile**: `GET /users/find`
+- **Get posts**: `GET /publications/find`
+- **Create post**: `POST /publications/post`
 
 
-## Enlace al repositorio del frontend
+## Link to the Frontend Repository
 
-El frontend de este proyecto está disponible en el siguiente repositorio:
+The frontend for this project is available in the following repository:
 
 ➡️ [Verdolaga Nation - Frontend](https://github.com/juanconde025/verdolaga_nation_front)
 
-## Documentación en Swagger 
+## Swagger Documentation
 
-El proyecto consta de documentación en Swagger para ver sus endponits y sus utilidades
+The project includes Swagger documentation to view its endpoints and their functionalities:
 
 ➡️ [Swagger - Verdolaga Nation](http://localhost:8080/swagger-ui.html)
