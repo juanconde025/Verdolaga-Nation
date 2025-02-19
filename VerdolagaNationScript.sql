@@ -183,7 +183,7 @@ CREATE TABLE `users` (
   `username` varchar(255) DEFAULT NULL,
   `email` varchar(255) DEFAULT NULL,
   `bio` varchar(255) DEFAULT NULL,
-  `photo` varchar(255) DEFAULT NULL,
+  `photo` varchar(1000) DEFAULT NULL,
   `password` varchar(255) DEFAULT NULL,
   `age` int DEFAULT NULL,
   `phone` varchar(255) DEFAULT NULL,
@@ -202,7 +202,7 @@ CREATE TABLE `users` (
 
 LOCK TABLES `users` WRITE;
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
-INSERT INTO `users` VALUES (17,'Karol','Leon','Dani','karol@gmail.com','soy linda','https://picsum.photos/200','$2a$10$Y49/m.RCGz2ybhEYTbnWfeSAwTisuIs1m3ECc7DBdWa6P4LZTL/9e',18,'3168411287','USER'),(18,'Daniel','Leon','Daniel','daniel@gmail.com','soy daniel :)','https://picsum.photos/200','$2a$10$sH1MDeNgoFG2t/HMFCMhbOmq2b5gGv/.0NYKfKrjVa84qh1sZWkvq',15,'3168411287','USER'),(19,'Leidy','Martinez','leidysabata','leidymartinezsabata203@gmail.com','Contadora Pública y mamá de Juan y Alejo','https://picsum.photos/200','$2a$10$utFWUQDTGKSyLIl0Sn8O7uMBvEeddTwQ0/Dgn/X2iTjXfH.cV0v.q',39,'3013203458','USER');
+INSERT INTO `users` VALUES (17,'Karol','Leon','Dani','karol@gmail.com','soy linda','https://scontent.cdninstagram.com/v/t51.2885-19/471659334_569204152407198_8242976090971735363_n.jpg?stp=dst-jpg_s150x150_tt6&_nc_cat=108&ccb=1-7&_nc_sid=f7ccc5&_nc_ohc=chiD1MaNrk8Q7kNvgH7pjB1&_nc_oc=AdhxgabbUW7fdhPi8G7Fh-Z3nxnNEjCn9ch25ZghA1QE9EGpbqF3oZuqkIE73iS-R8nibsJhrd0uQtVGmzS0ekBm&_nc_ad=z-m&_nc_cid=0&_nc_zt=24&_nc_ht=scontent.cdninstagram.com&oh=00_AYDZTDRgHor3oJ_Tw_7wayRc_KF9HGM-5xiA3es2odCbsg&oe=67BB28AF','$2a$10$Y49/m.RCGz2ybhEYTbnWfeSAwTisuIs1m3ECc7DBdWa6P4LZTL/9e',18,'3168411287','USER'),(18,'Daniel','Leon','Daniel','daniel@gmail.com','soy daniel :)','https://cdn2.thecatapi.com/images/MTY3ODIyMQ.jpg','$2a$10$sH1MDeNgoFG2t/HMFCMhbOmq2b5gGv/.0NYKfKrjVa84qh1sZWkvq',15,'3168411287','USER'),(19,'Leidy','Martinez','leidysabata','leidymartinezsabata203@gmail.com','Contadora Pública y mamá de Juan y Alejo','https://cdn2.thecatapi.com/images/MTY3ODIyMQ.jpg','$2a$10$utFWUQDTGKSyLIl0Sn8O7uMBvEeddTwQ0/Dgn/X2iTjXfH.cV0v.q',39,'3013203458','USER');
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
