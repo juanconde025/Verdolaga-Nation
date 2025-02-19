@@ -141,7 +141,7 @@ CREATE TABLE `publications` (
 
 LOCK TABLES `publications` WRITE;
 /*!40000 ALTER TABLE `publications` DISABLE KEYS */;
-INSERT INTO `publications` VALUES (5,'Soy daniel',18,'2025-02-18 16:12:58.627554','https://example.com/image.jpg');
+INSERT INTO `publications` VALUES (5,'Soy daniel',18,'2025-02-18 16:12:58.627554','https://picsum.photos/200');
 /*!40000 ALTER TABLE `publications` ENABLE KEYS */;
 UNLOCK TABLES;
 
