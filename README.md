@@ -75,3 +75,9 @@ The frontend for this project is available in the following repository:
 The project includes Swagger documentation to view its endpoints and their functionalities:
 
 ➡️ [Swagger - Verdolaga Nation](http://localhost:8080/swagger-ui.html)
+
+## Video Presentation
+
+➡️ [Video - Presentation](https://drive.google.com/drive/folders/1qJPs0wA8jdm8EgMvh3Vc-TuLcAFnGeSC?usp=sharing)
+
+
