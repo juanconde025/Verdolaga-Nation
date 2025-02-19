@@ -202,7 +202,7 @@ CREATE TABLE `users` (
 
 LOCK TABLES `users` WRITE;
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
-INSERT INTO `users` VALUES (17,'Karol','Leon','Dani','karol@gmail.com','soy linda','url','$2a$10$Y49/m.RCGz2ybhEYTbnWfeSAwTisuIs1m3ECc7DBdWa6P4LZTL/9e',18,'3168411287','USER'),(18,'Daniel','Leon','Daniel','daniel@gmail.com','soy daniel :)','url','$2a$10$sH1MDeNgoFG2t/HMFCMhbOmq2b5gGv/.0NYKfKrjVa84qh1sZWkvq',15,'3168411287','USER'),(19,'Leidy','Martinez','leidysabata','leidymartinezsabata203@gmail.com','Contadora Pública y mamá de Juan y Alejo','url','$2a$10$utFWUQDTGKSyLIl0Sn8O7uMBvEeddTwQ0/Dgn/X2iTjXfH.cV0v.q',39,'3013203458','USER');
+INSERT INTO `users` VALUES (17,'Karol','Leon','Dani','karol@gmail.com','soy linda','https://picsum.photos/200','$2a$10$Y49/m.RCGz2ybhEYTbnWfeSAwTisuIs1m3ECc7DBdWa6P4LZTL/9e',18,'3168411287','USER'),(18,'Daniel','Leon','Daniel','daniel@gmail.com','soy daniel :)','https://picsum.photos/200','$2a$10$sH1MDeNgoFG2t/HMFCMhbOmq2b5gGv/.0NYKfKrjVa84qh1sZWkvq',15,'3168411287','USER'),(19,'Leidy','Martinez','leidysabata','leidymartinezsabata203@gmail.com','Contadora Pública y mamá de Juan y Alejo','https://picsum.photos/200','$2a$10$utFWUQDTGKSyLIl0Sn8O7uMBvEeddTwQ0/Dgn/X2iTjXfH.cV0v.q',39,'3013203458','USER');
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
